@@ -1,5 +1,7 @@
 // import { useState } from "react";
 
+const { useState } = require("react");
+
 // function App() {
 //   return (
 //     <div>
@@ -63,3 +65,44 @@
 // export default App;
 
 // going to create a new todo
+
+import React, { Fragment } from "react";
+
+function App() {
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: "go to gym",
+      description: "go to gym today",
+    },
+    {
+      id: 1,
+      title: "go to mess",
+      description: "go to mess today",
+    },
+    {
+      id: 1,
+      title: "go to class",
+      description: "go to gclass today",
+    },
+  ]);
+  return (
+    <div>
+      <button>Add a todo</button>
+      {todos.map((todo) => (
+        <Todo title={todo.title} description={todo.description} />
+      ))}
+    </div>
+  );
+}
+
+function Todo({ title, description }) {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <h5>{description}</h5>
+    </div>
+  );
+}
+
+export default App;
