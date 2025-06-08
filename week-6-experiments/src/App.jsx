@@ -1,7 +1,5 @@
 // import { useState } from "react";
 
-const { useState } = require("react");
-
 // function App() {
 //   return (
 //     <div>
@@ -66,43 +64,59 @@ const { useState } = require("react");
 
 // going to create a new todo
 
-import React, { Fragment } from "react";
+// import React, { Fragment } from "react";
+// import { useState } from "react";
+// let counter = 4;
 
-function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      title: "go to gym",
-      description: "go to gym today",
-    },
-    {
-      id: 1,
-      title: "go to mess",
-      description: "go to mess today",
-    },
-    {
-      id: 1,
-      title: "go to class",
-      description: "go to gclass today",
-    },
-  ]);
-  return (
-    <div>
-      <button>Add a todo</button>
-      {todos.map((todo) => (
-        <Todo title={todo.title} description={todo.description} />
-      ))}
-    </div>
-  );
-}
+// function App() {
+//   const [todos, setTodos] = useState([
+//     {
+//       id: 1,
+//       title: "go to gym",
+//       description: "go to gym today",
+//     },
+//     {
+//       id: 2,
+//       title: "go to mess",
+//       description: "go to mess today",
+//     },
+//     {
+//       id: 3,
+//       title: "go to class",
+//       description: "go to class today",
+//     },
+//   ]);
 
-function Todo({ title, description }) {
-  return (
-    <div>
-      <h1>{title}</h1>
-      <h5>{description}</h5>
-    </div>
-  );
-}
+//   function addTodo() {
+//     setTodos([
+//       ...todos,
+//       {
+//         id: counter++,
+//         title: Math.random(),
+//         description: Math.random(),
+//       },
+//     ]);
+//   }
 
-export default App;
+//   return (
+//     <div>
+//       <button onClick={addTodo}>Add a todo</button>
+//       {todos.map((todo) => (
+//         <Todo key={todo.id} title={todo.title} description={todo.description} />
+//       ))}
+//     </div>
+//   );
+// }
+
+// function Todo({ title, description }) {
+//   return (
+//     <div>
+//       <h1>{title}</h1>
+//       <h5>{description}</h5>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// Eros (Wrapper Components)
